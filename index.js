@@ -17,7 +17,7 @@ app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONGO_URL, {
-  dbName: 'validate'
+  dbName: 'horcruxlog'
 }).then(console.log("Connected to MongoDB")).catch((err) => console.log(err));
 
 const storage = multer.diskStorage({
